@@ -1,0 +1,47 @@
+---
+// Header.astro
+---
+<header class="top-0 w-full z-50 px-4 py-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Logo con efecto de gradiente -->
+      <a href="/" class="text-2xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent hover:scale-105 transition-all">
+        AH
+      </a>
+      
+      <!-- Navegación con efecto hover mejorado -->
+      <nav>
+        <ul class="flex items-center gap-8">
+          <li>
+            <a href="#proyectos" 
+               class="relative text-sm text-gray-300 hover:text-white transition-colors">
+              <span class="relative">
+                Proyectos
+                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#habilidades" 
+               class="relative text-sm text-gray-300 hover:text-white transition-colors">
+              <span class="relative">
+                Habilidades
+                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/CV-HERBAS-LEIVA-ALEX-RODRIGO.pdf"
+              class="px-4 py-2 text-sm text-black font-medium bg-white rounded-full hover:bg-yellow-200 transition-colors duration-300"
+              download
+            >
+              Descargar CV
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <!-- Línea decorativa con gradiente -->
+    <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+  </header>
