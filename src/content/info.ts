@@ -15,7 +15,7 @@ export const proys = {
             name: "Bot Discord",
             description: "Bot de Discord creado para hacer más divertida la experiencia con amigos en Discord.",
             image: "/paisaje.jpg",
-            github: "https://github.com/tu-repo-bot",
+            github: "https://github.com/alexhl0723/botDiscord",
             technologies: [
                 { name: "JavaScript", bgColor: "rgba(253, 230, 138, 0.1)", textColor: "#FDE68A" },
                 { name: "Node.js", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
