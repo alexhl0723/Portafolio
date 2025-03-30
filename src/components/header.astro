@@ -1,47 +1,121 @@
 ---
 // Header.astro
 ---
-<header class="top-0 w-full z-50 px-4 py-3">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <!-- Logo con efecto de gradiente -->
-      <a href="/" class="text-2xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent hover:scale-105 transition-all">
-        AH
-      </a>
-      
-      <!-- Navegación con efecto hover mejorado -->
-      <nav>
-        <ul class="flex items-center gap-8">
-          <li>
-            <a href="#proyectos" 
-               class="relative text-sm text-gray-300 hover:text-white transition-colors">
-              <span class="relative">
-                Proyectos
-                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#habilidades" 
-               class="relative text-sm text-gray-300 hover:text-white transition-colors">
-              <span class="relative">
-                Habilidades
-                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a 
-              href="/CV-HERBAS-LEIVA-ALEX-RODRIGO.pdf"
-              class="px-4 py-2 text-sm text-black font-medium bg-white rounded-full hover:bg-yellow-200 transition-colors duration-300"
-              download
-            >
-              Descargar CV
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+<header class="top-0 w-full z-50 px-4 py-3 m-auto">
+  <div class="max-w-5xl mx-auto flex items-center justify-between">
+    <!-- Logo con efecto de gradiente -->
+    <a href="/" class="text-2xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent hover:scale-105 transition-all">
+      AH
+    </a>
+    
+    <!-- Navegación para desktop -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8">
+        <li>
+          <a href="#proyectos" 
+             class="relative text-sm text-gray-300 hover:text-white transition-colors">
+            <span class="relative">
+              Proyectos
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#habilidades" 
+             class="relative text-sm text-gray-300 hover:text-white transition-colors">
+            <span class="relative">
+              Habilidades
+              <span class="absolute inset-x-0 bottom-0 h-0.5 bg-yellow-200 transform scale-x-0 transition-transform origin-left hover:scale-x-100"></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/CV-HERBAS-LEIVA-ALEX-RODRIGO.pdf"
+            class="px-4 py-2 text-sm text-black font-medium bg-white rounded-full hover:bg-yellow-200 transition-colors duration-300"
+            download
+          >
+            Descargar CV
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón hamburguesa simple como en la imagen -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Línea decorativa con gradiente -->
+  <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
   
-    <!-- Línea decorativa con gradiente -->
-    <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
-  </header>
+  <!-- Menú móvil desplegable (solo visible al hacer clic en menú) -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-end mb-12">
+        <button id="close-menu" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <ul class="flex flex-col items-start gap-6">
+        <li class="w-full border-b border-gray-800 pb-4">
+          <a href="#proyectos" class="text-xl text-gray-300 hover:text-white transition-colors">
+            Proyectos
+          </a>
+        </li>
+        <li class="w-full border-b border-gray-800 pb-4">
+          <a href="#habilidades" class="text-xl text-gray-300 hover:text-white transition-colors">
+            Habilidades
+          </a>
+        </li>
+        <li class="mt-6">
+          <a 
+            href="/CV-HERBAS-LEIVA-ALEX-RODRIGO.pdf"
+            class="inline-block px-6 py-3 text-black font-medium bg-white rounded-full hover:bg-yellow-200 transition-colors duration-300"
+            download
+          >
+            Descargar CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  // JavaScript para controlar el menú móvil
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+    if (menuToggle && closeMenu && mobileMenu) {
+      // Abrir menú
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll
+      });
+
+      // Cerrar menú
+      closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = ''; // Restaurar scroll
+      });
+
+      // Cerrar menú al hacer clic en links
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  });
+</script>
