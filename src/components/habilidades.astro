@@ -9,13 +9,12 @@ import MySQl from "../icons/MySQl.astro";
 import Node from "../icons/node.astro";
 ---
 
-<section class="py-24 from-black/20 to-transparent">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-5xl font-bold text-center mb-12">Habilidades Técnicas</h2>
-        <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">Conjunto de tecnologías y conocimientos que he adquirido a lo largo de mi trayectoria profesional.</p>
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 from-black/20 to-transparent w-full">
+    <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-6 sm:mb-8 md:mb-12">Habilidades Técnicas</h2>
+        <p class="text-center text-gray-400 mb-8 sm:mb-12 md:mb-16 max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base">Conjunto de tecnologías y conocimientos que he adquirido a lo largo de mi trayectoria profesional.</p>
 
-
-        <div class="skills-container">
+        <div class="skills-container mx-auto w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-2xl xl:max-w-3xl">
             <!-- Frontend Section -->
             <div class="skill-section">
                 <div class="section-header">
@@ -24,19 +23,19 @@ import Node from "../icons/node.astro";
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card group">
-                        <Html class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <Html class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">HTML5</span>
                     </div>
                     <div class="skill-card group">
-                        <Css class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <Css class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">CSS3</span>
                     </div>
                     <div class="skill-card group">
-                        <JavaScript class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <JavaScript class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">JavaScript</span>
                     </div>
                     <div class="skill-card group">
-                        <Astroicon class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <Astroicon class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">Astro</span>
                     </div>
                 </div>
@@ -50,19 +49,19 @@ import Node from "../icons/node.astro";
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card group">
-                        <Java class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <Java class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">Java</span>
                     </div>
                     <div class="skill-card group">
-                        <SqlServer class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <SqlServer class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">SQL Server</span>
                     </div>
                     <div class="skill-card group">
-                        <MySQl class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <MySQl class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">MySQL</span>
                     </div>
                     <div class="skill-card group">
-                        <Node class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <Node class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">Node.js</span>
                     </div>
                 </div>
@@ -76,22 +75,22 @@ import Node from "../icons/node.astro";
 <style>
     /* Estilos del contenedor principal */
     .skills-container {
-        @apply space-y-16;
+        @apply space-y-8 sm:space-y-12 md:space-y-16;
     }
     
     /* Estilos de la sección de habilidades */
     .skill-section {
-        @apply relative rounded-xl p-6 bg-black/10 border border-gray-800/50 hover:border-gray-700/70 transition-all duration-300;
+        @apply relative rounded-xl p-4 sm:p-5 md:p-6 bg-black/10 border border-gray-800/50 hover:border-gray-700/70 transition-all duration-300;
     }
     
     /* Estilos del encabezado de sección */
     .section-header {
-        @apply flex items-center mb-8 gap-3;
+        @apply flex items-center mb-4 sm:mb-6 md:mb-8 gap-2 sm:gap-3;
     }
     
     /* Indicador de categoría */
     .category-indicator {
-        @apply w-3 h-12 bg-gradient-to-b from-yellow-200 to-yellow-500/50 rounded-full;
+        @apply w-2 sm:w-3 h-8 sm:h-10 md:h-12 bg-gradient-to-b from-yellow-200 to-yellow-500/50 rounded-full;
     }
     
     .category-indicator.backend {
@@ -108,7 +107,7 @@ import Node from "../icons/node.astro";
     
     /* Título de la sección */
     .section-title {
-        @apply text-2xl font-semibold text-yellow-200;
+        @apply text-xl sm:text-2xl font-semibold text-yellow-200;
     }
     
     .skill-section:has(.category-indicator.backend) .section-title {
@@ -125,12 +124,12 @@ import Node from "../icons/node.astro";
     
     /* Grid de habilidades */
     .skills-grid {
-        @apply grid grid-cols-2 md:grid-cols-4 gap-8;
+        @apply grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4;
     }
     
     /* Tarjeta de habilidad */
     .skill-card {
-        @apply p-6 rounded-xl bg-black/20 border border-gray-800 hover:border-yellow-200/50 transition-all duration-300;
+        @apply p-3 sm:p-4 md:p-5 rounded-xl bg-black/20 border border-gray-800 hover:border-yellow-200/50 transition-all duration-300;
     }
     
     .skill-section:has(.category-indicator.backend) .skill-card:hover {
@@ -147,12 +146,12 @@ import Node from "../icons/node.astro";
     
     /* Nombre de la habilidad */
     .skill-name {
-        @apply block text-center mt-4 text-gray-400 group-hover:text-white transition-colors;
+        @apply block text-center mt-2 sm:mt-3 md:mt-4 text-gray-400 text-xs sm:text-sm md:text-base group-hover:text-white transition-colors;
     }
     
     /* Iconos personalizados para nuevas habilidades */
     .skill-icon {
-        @apply w-20 h-20 mx-auto rounded-full flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform bg-gradient-to-br;
+        @apply w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold group-hover:scale-110 transition-transform bg-gradient-to-br;
     }
     
     .skill-icon.react {
