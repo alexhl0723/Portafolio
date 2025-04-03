@@ -6,21 +6,20 @@ import SectionContainer from '../components/section_container.astro';
 import Habilidades from '../components/habilidades.astro';
 import Github from '../icons/github.astro';
 import LinkedIn from '../icons/linkedIn.astro';
-import Header from '../components/header.astro';
 ---
 
 <Layout title="Alex Herbas - Desarrollador Web">
 	
 
-	<main class="pt-24">
+	<main class="pt-10 sm:pt-16 lg:pt-24">
 		<SectionContainer>
-			<section class="mx-auto px-4 flex items-center gap-1 md:gap-2 md:px-w3 align-center justify-center">
-				<div class="profile-image relative w-[200px] mr-5 md:w-auto ">
+			<section class="mx-auto px-4 flex flex-col sm:flex-row items-center gap-1 md:gap-2 md:px-w3 align-center justify-center">
+				<div class="profile-image relative w-auto sm:mr-5 md:w-auto mb-4 sm:mb-0">
 					<img
 						src="/perfil_temporal.png" 
 						alt="Alex Herbas" 
-						class="w-full h-auto rounded-2xl object-contain hover:scale-105 transition-transform duration-300 md:w-52 md:h-52 lg:w-64 lg:h-64
-						sm:w-full sm:h-auto xl:w-72 xl:h-72"
+						class="w-28 h-28 rounded-2xl object-contain hover:scale-105 transition-transform duration-300 md:w-52 md:h-52 lg:w-64 lg:h-64
+						sm:w-44 sm:h-44 xl:w-72 xl:h-72"
 					>
 				</div>
 				
@@ -28,6 +27,7 @@ import Header from '../components/header.astro';
 					<h1 class="animate-fade-in animate-delay-100 text-2xl font-bold bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent md:text-5xl">
 						Hola, soy Alex
 					</h1>
+			
 					
 					<div class="flex items-center gap-2">
 						<Badge class="animate-pulse">
@@ -46,7 +46,7 @@ import Header from '../components/header.astro';
 
 					<div class="flex items-center gap-4 mt-4 min-w-[250px]">
 						<a 
-							href="/CV-HERBASLEIVAALEXRODRIGO.pdf" 
+							href="/cv.pdf" 
 							download
 							class="bg-white text-black px-6 w-auto py-2 rounded-lg font-medium hover:scale-105 transition-transform"
 						>
@@ -57,14 +57,14 @@ import Header from '../components/header.astro';
 							<a
 								href="https://github.com/alexhl0723" 
 								target="_blank"
-								class="text-white hover:scale-125 hover:animate-pulsing"
+								class="hover:scale-125 transition-transform"
 							>
 								<Github class="w-8 h-8"/>
 							</a>
 							<a 
 								href="https://www.linkedin.com/in/alexherbasleiva/" 
 								target="_blank"
-								class="text-white hover:scale-125 hover:animate-pulsing"
+								class="hover:scale-125 transition-transform"
 							>
 								<LinkedIn class="w-8 h-8"/>
 							</a>

@@ -7,9 +7,10 @@ import Java from "../icons/java.astro";
 import SqlServer from "../icons/SqlServer.astro";
 import MySQl from "../icons/MySQl.astro";
 import Node from "../icons/node.astro";
+import Tailwindcss from "../icons/Tailwindcss.astro";
 ---
 
-<section class="py-12 sm:py-16 md:py-20 lg:py-24 from-black/20 to-transparent w-full">
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 from-black/20 to-transparent w-full" id="skills" >
     <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-6 sm:mb-8 md:mb-12">Habilidades Técnicas</h2>
         <p class="text-center text-gray-400 mb-8 sm:mb-12 md:mb-16 max-w-xs sm:max-w-md md:max-w-2xl mx-auto text-sm sm:text-base">Conjunto de tecnologías y conocimientos que he adquirido a lo largo de mi trayectoria profesional.</p>
@@ -38,6 +39,10 @@ import Node from "../icons/node.astro";
                         <Astroicon class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
                         <span class="skill-name">Astro</span>
                     </div>
+                    <div class="skill-card group">
+                        <Tailwindcss class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
+                        <span class="skill-name">Tailwind CSS</span>
+                    </div>
                 </div>
             </div>
 
@@ -62,7 +67,7 @@ import Node from "../icons/node.astro";
                     </div>
                     <div class="skill-card group">
                         <Node class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto group-hover:scale-110 transition-transform" />
-                        <span class="skill-name">Node.js</span>
+                        <span class="skill-name">Node.js</span> 
                     </div>
                 </div>
             </div>
@@ -80,7 +85,7 @@ import Node from "../icons/node.astro";
     
     /* Estilos de la sección de habilidades */
     .skill-section {
-        @apply relative rounded-xl p-4 sm:p-5 md:p-6 bg-black/10 border border-gray-800/50 hover:border-gray-700/70 transition-all duration-300;
+        @apply relative rounded-xl p-4 sm:p-5 md:p-6 bg-black/20 border border-gray-800/50 hover:border-gray-700/90 transition-all duration-300;
     }
     
     /* Estilos del encabezado de sección */
@@ -89,38 +94,28 @@ import Node from "../icons/node.astro";
     }
     
     /* Indicador de categoría */
+    /* frontend */
     .category-indicator {
         @apply w-2 sm:w-3 h-8 sm:h-10 md:h-12 bg-gradient-to-b from-yellow-200 to-yellow-500/50 rounded-full;
     }
-    
+    /* backends */
     .category-indicator.backend {
-        @apply from-blue-300 to-blue-500/50;
-    }
-    
-    .category-indicator.web {
-        @apply from-green-300 to-green-500/50;
-    }
-    
-    .category-indicator.tools {
-        @apply from-purple-300 to-purple-500/50;
+        @apply from-blue-200 to-blue-500/90;
     }
     
     /* Título de la sección */
+
+    /*1*/
     .section-title {
         @apply text-xl sm:text-2xl font-semibold text-yellow-200;
     }
-    
+    /*2*/
     .skill-section:has(.category-indicator.backend) .section-title {
         @apply text-blue-300;
     }
     
-    .skill-section:has(.category-indicator.web) .section-title {
-        @apply text-green-300;
-    }
+  
     
-    .skill-section:has(.category-indicator.tools) .section-title {
-        @apply text-purple-300;
-    }
     
     /* Grid de habilidades */
     .skills-grid {
@@ -129,60 +124,15 @@ import Node from "../icons/node.astro";
     
     /* Tarjeta de habilidad */
     .skill-card {
-        @apply p-3 sm:p-4 md:p-5 rounded-xl bg-black/20 border border-gray-800 hover:border-yellow-200/50 transition-all duration-300;
+        @apply p-3 sm:p-4 md:p-5 rounded-xl bg-black/20 border border-gray-800 hover:border-yellow-100/90 transition-all ease-in-out duration-700;
     }
     
     .skill-section:has(.category-indicator.backend) .skill-card:hover {
         @apply hover:border-blue-300/50;
     }
     
-    .skill-section:has(.category-indicator.web) .skill-card:hover {
-        @apply hover:border-green-300/50;
-    }
-    
-    .skill-section:has(.category-indicator.tools) .skill-card:hover {
-        @apply hover:border-purple-300/50;
-    }
-    
     /* Nombre de la habilidad */
     .skill-name {
         @apply block text-center mt-2 sm:mt-3 md:mt-4 text-gray-400 text-xs sm:text-sm md:text-base group-hover:text-white transition-colors;
-    }
-    
-    /* Iconos personalizados para nuevas habilidades */
-    .skill-icon {
-        @apply w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold group-hover:scale-110 transition-transform bg-gradient-to-br;
-    }
-    
-    .skill-icon.react {
-        @apply from-blue-400 to-cyan-500 text-white before:content-['R'];
-    }
-    
-    .skill-icon.nextjs {
-        @apply from-gray-700 to-black text-white before:content-['N'];
-    }
-    
-    .skill-icon.tailwind {
-        @apply from-cyan-400 to-blue-500 text-white before:content-['T'];
-    }
-    
-    .skill-icon.typescript {
-        @apply from-blue-500 to-blue-700 text-white before:content-['TS'];
-    }
-    
-    .skill-icon.git {
-        @apply from-orange-500 to-red-500 text-white before:content-['G'];
-    }
-    
-    .skill-icon.vscode {
-        @apply from-blue-500 to-blue-700 text-white before:content-['VS'];
-    }
-    
-    .skill-icon.figma {
-        @apply from-purple-500 to-pink-500 text-white before:content-['F'];
-    }
-    
-    .skill-icon.docker {
-        @apply from-blue-400 to-blue-600 text-white before:content-['D'];
     }
 </style>
