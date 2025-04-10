@@ -1,0 +1,111 @@
+---
+import Github from '../icons/github.astro';
+import LinkedIn from '../icons/linkedIn.astro';
+import Email from '../icons/Email.astro';
+---
+
+<footer class=" text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Column 1: Logo & Description -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-xl font-bold mb-4">Alex Herbas</h3>
+                <p class="text-gray-400 text-sm mb-4 text-center md:text-left">
+                    Desarrollador y diseñador apasionado por crear experiencias web excepcionales.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                <ul class="flex flex-col gap-2 text-center md:text-left">
+                    <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Proyectos</a></li>
+                    <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Habilidades</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                <a href="mailto:alexrodrigoherbas07@gmail.com" class="text-gray-400 hover:text-white transition-colors mb-2 flex items-center gap-2">
+                    <span class="inline-block w-5 h-5"></span>
+                    <Email />
+                    alexrodrigoherbas07@gmail.com
+                </a>
+                <p class="text-gray-400 text-sm mb-4 text-center md:text-left">
+                    ¿Tienes un proyecto interesante? ¡Hablemos!
+                </p>
+            </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex flex-col items-center justify-center gap-6 border-t border-gray-800 pt-8">
+            <div class="flex gap-6">
+                <a 
+                    href="https://github.com/alexhl0723" 
+                    target="_blank" 
+                    aria-label="GitHub"
+                    class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
+                >
+                    <Github class="w-6 h-6"/>
+                </a>
+                <a 
+                    href="https://www.linkedin.com/in/alexherbasleiva/" 
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
+                >
+                    <LinkedIn class="w-6 h-6"/>
+                </a>
+            </div>
+            <p class="text-gray-500 text-center text-sm">
+                &copy; {new Date().getFullYear()} Alex Herbas. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .container {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    @keyframes pulsing {
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
+    }
+
+    .animate-pulsing {
+        animation: pulsing 1.5s infinite;
+    }
+
+    footer a {
+        transition: all 0.3s ease;
+    }
+
+    footer h3 {
+        position: relative;
+    }
+
+    footer h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background: rgb(99, 102, 241);
+        border-radius: 2px;
+    }
+
+    @media (min-width: 768px) {
+        footer h3::after {
+            left: 0;
+            transform: none;
+        }
+    }
+</style>
