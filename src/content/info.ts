@@ -3,32 +3,33 @@ export const proys = {
         {
             name: "Nautica Plus",
             description: "Aplicación web que permite a los usuarios registrar una reserva y gestionar sus reservas.",
-            image: "/paisaje.jpg",
+            image: "/ReservaRes.png",
             github: "https://github.com/alexhl0723/ReservaRestaurante",
             technologies: [
-                { name: "Java", bgColor: "rgba(253, 230, 138, 0.1)", textColor: "#FDE68A" },
+                { name: "Java", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
+                { name: "Javascript", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
                 { name: "Tailwind CSS", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
-                { name: "MySQL", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
+                { name: "MySQL", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
             ]
         },
         {
             name: "Bot Discord",
             description: "Bot de Discord creado para hacer más divertida la experiencia con amigos en Discord.",
-            image: "/paisaje.jpg",
+            image: "/BotMewin.png",
             github: "https://github.com/alexhl0723/botDiscord",
             technologies: [
-                { name: "JavaScript", bgColor: "rgba(253, 230, 138, 0.1)", textColor: "#FDE68A" },
+                { name: "JavaScript", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
                 { name: "Node.js", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
             ]
         },
         {
-            name: "Librería BookStore",
-            description: "Aplicación web que permite a los usuarios buscar libros y agregarlos a su carrito de compras.",
-            image: "/paisaje.jpg",
-            github: "https://github.com/tu-repo-bookstore",
+            name: "Bot Whatsapp",
+            description: "Bot de whatsapp creado con comandos personalizados y funcionalidades para hacer más divertida la experiencia con amigos en whatsapp.",
+            image: "/botWhap.png",
+            github: "https://github.com/alexhl0723/WhatAppbot",
             technologies: [
-                { name: "Astro", bgColor: "rgba(253, 230, 138, 0.1)", textColor: "#FDE68A" },
-                { name: "Tailwind CSS", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
+                { name: "Node.js", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
+                { name: "Javascript", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
             ]
         }
     ]
