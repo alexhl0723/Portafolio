@@ -4,108 +4,193 @@ import LinkedIn from '../icons/linkedIn.astro';
 import Email from '../icons/Email.astro';
 ---
 
-<footer class=" text-white py-12">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <!-- Column 1: Logo & Description -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-xl font-bold mb-4">Alex Herbas</h3>
-                <p class="text-gray-400 text-sm mb-4 text-center md:text-left">
-                    Desarrollador y diseñador apasionado por crear experiencias web excepcionales.
-                </p>
-            </div>
+<footer class="text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Column 1: Logo & Descripción -->
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-4">Alex Herbas</h3>
+        <p class="text-gray-400 text-sm text-center md:text-left">
+          Desarrollador y diseñador apasionado por crear experiencias web excepcionales.
+        </p>
+      </div>
 
-            <!-- Column 2: Quick Links -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
-                <ul class="flex flex-col gap-2 text-center md:text-left">
-                    <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Proyectos</a></li>
-                    <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Habilidades</a></li>
-                </ul>
-            </div>
+      <!-- Column 2: Enlaces rápidos -->
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+        <ul class="flex flex-col gap-2 text-center md:text-left">
+          <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+          <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Proyectos</a></li>
+          <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Habilidades</a></li>
+        </ul>
+      </div>
 
-            <!-- Column 3: Contact Info -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-xl font-bold mb-4">Contacto</h3>
-                <a href="mailto:alexrodrigoherbas07@gmail.com" class="text-gray-400 hover:text-white transition-colors mb-2 flex items-center gap-2">
-                    <span class="inline-block w-5 h-5"></span>
-                    <Email />
-                    alexrodrigoherbas07@gmail.com
-                </a>
-                <p class="text-gray-400 text-sm mb-4 text-center md:text-left">
-                    ¿Tienes un proyecto interesante? ¡Hablemos!
-                </p>
-            </div>
-        </div>
+      <!-- Column 3: Info de contacto -->
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-4">Contacto</h3>
+        <a href="mailto:alexrodrigoherbas07@gmail.com" class="text-gray-400 hover:text-white transition-colors mb-2 flex items-center gap-2">
+          <Email class="w-5 h-5" />
+          alexrodrigoherbas07@gmail.com
+        </a>
+        <p class="text-gray-400 text-sm text-center md:text-left">
+          ¿Tienes un proyecto interesante? ¡Hablemos!
+        </p>
+      </div>
 
-        <!-- Social Icons -->
-        <div class="flex flex-col items-center justify-center gap-6 border-t border-gray-800 pt-8">
-            <div class="flex gap-6">
-                <a 
-                    href="https://github.com/alexhl0723" 
-                    target="_blank" 
-                    aria-label="GitHub"
-                    class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
-                >
-                    <Github class="w-6 h-6"/>
-                </a>
-                <a 
-                    href="https://www.linkedin.com/in/alexherbasleiva/" 
-                    target="_blank"
-                    aria-label="LinkedIn"
-                    class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
-                >
-                    <LinkedIn class="w-6 h-6"/>
-                </a>
-            </div>
-            <p class="text-gray-500 text-center text-sm">
-                &copy; {new Date().getFullYear()} Alex Herbas. Todos los derechos reservados.
-            </p>
-        </div>
+      <!-- Column 4: Formulario de contacto -->
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-center md:text-left">Envíame un mensaje</h3>
+        <form id="contactForm" class="flex flex-col gap-3">
+          <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre"
+            required
+            class="px-4 py-2 rounded bg-white/10 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu correo"
+            required
+            class="px-4 py-2 rounded bg-white/10 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <textarea
+            name="message"
+            rows="3"
+            placeholder="Tu mensaje"
+            required
+            class="px-4 py-2 rounded bg-white/10 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded transition-all duration-300"
+            id="submitButton"
+          >
+            Enviar
+          </button>
+          <p id="formStatus" class="text-center mt-2 hidden"></p>
+        </form>
+      </div>
     </div>
+
+    
+
+    <script is:inline>
+      import './contactScripts/contactForm';
+    </script>
+
+    <!-- Social & footer info -->
+    <div class="flex flex-col items-center justify-center gap-6 border-t border-gray-800 pt-8">
+      <div class="flex gap-6">
+        <a
+          href="https://github.com/alexhl0723"
+          target="_blank"
+          aria-label="GitHub"
+          class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
+        >
+          <Github class="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alexherbasleiva/"
+          target="_blank"
+          aria-label="LinkedIn"
+          class="text-gray-400 hover:text-white hover:scale-125 hover:animate-pulsing transition-all duration-300"
+        >
+          <LinkedIn class="w-6 h-6" />
+        </a>
+      </div>
+      <p class="text-gray-500 text-center text-sm">
+        &copy; {new Date().getFullYear()} Alex Herbas. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
 </footer>
 
 <style>
-    .container {
-        max-width: 1200px;
-        width: 100%;
-    }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+  }
 
-    @keyframes pulsing {
-        0% { opacity: 1; }
-        50% { opacity: 0.7; }
-        100% { opacity: 1; }
-    }
+  @keyframes pulsing {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
 
-    .animate-pulsing {
-        animation: pulsing 1.5s infinite;
-    }
+  .animate-pulsing {
+    animation: pulsing 1.5s infinite;
+  }
 
-    footer a {
-        transition: all 0.3s ease;
-    }
+  footer h3 {
+    position: relative;
+  }
 
-    footer h3 {
-        position: relative;
-    }
+  footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: rgb(99, 102, 241);
+    border-radius: 2px;
+  }
 
+  @media (min-width: 768px) {
     footer h3::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background: rgb(99, 102, 241);
-        border-radius: 2px;
+      left: 0;
+      transform: none;
     }
-
-    @media (min-width: 768px) {
-        footer h3::after {
-            left: 0;
-            transform: none;
-        }
-    }
+  }
 </style>
+
+
+<script is:inline>
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault(); // Prevenir envío tradicional
+    
+    const button = document.getElementById('submitButton');
+    const status = document.getElementById('formStatus');
+    
+    button.textContent = 'Enviando...';
+    button.disabled = true;
+    
+    try {
+      const formData = new FormData(this);
+      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        status.textContent = '¡Mensaje enviado con éxito! Gracias por contactarme.';
+        status.className = 'text-center mt-2 text-green-400';
+        status.classList.remove('hidden');
+        this.reset();
+      } else {
+        status.textContent = result.message || 'Error al enviar el mensaje';
+        status.className = 'text-center mt-2 text-red-400';
+        status.classList.remove('hidden');
+      }
+    } catch (error) {
+      status.textContent = 'Error de conexión. Por favor, inténtalo más tarde.';
+      status.className = 'text-center mt-2 text-red-400';
+      status.classList.remove('hidden');
+    } finally {
+      button.textContent = 'Enviar';
+      button.disabled = false;
+      
+      setTimeout(() => {
+        if (status.className.includes('text-green-400')) {
+          status.classList.add('hidden');
+        }
+      }, 5000);
+    }
+  });
+</script>

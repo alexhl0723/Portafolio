@@ -8,7 +8,7 @@ export const proys = {
             technologies: [
                 { name: "Java", bgColor: "rgba(253, 230, 138, 0.1)", textColor: "#FDE68A" },
                 { name: "Tailwind CSS", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" },
-                { name: "MySQL", bgColor: "rgba(21, 128, 61, 0.2)", textColor: "#BFDBFE" }
+                { name: "MySQL", bgColor: "rgba(191, 219, 254, 0.1)", textColor: "#BFDBFE" }
             ]
         },
         {
