@@ -50,6 +50,29 @@ export const POST: APIRoute = async ({ request }) => {
     });
     
     console.log("📝 Mensaje guardado en MongoDB con ID:", resultado.insertedId);
+
+    // console.log("📝 Mensaje guardado en MongoDB con ID:", resultado.insertedId);
+
+    // Enviar mensaje al bot de WhatsApp
+    // try {
+    //   const mensajeParaBot = `mensaje desde tu portafolio:\n\n👤 Nombre: ${name}\n📧 Correo: ${email}\n💬 Mensaje: ${message}`;
+      
+    //   await fetch("http://localhost:3000/api/enviar-mensaje", { // cámbialo si tienes otro endpoint
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({
+    //       numero: "521XXXXXXXXXX", // reemplázalo con tu número si tu bot lo necesita
+    //       mensaje: mensajeParaBot
+    //     })
+    //   });
+
+    //   console.log("📲 Mensaje enviado al bot de WhatsApp");
+    // } catch (botError) {
+    //   console.error("❌ Error al enviar el mensaje al bot de WhatsApp:", botError);
+    // }
+
+
+    
     
     // Respuesta exitosa
     return new Response(

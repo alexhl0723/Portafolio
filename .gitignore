@@ -27,10 +27,15 @@ pnpm-debug.log*
 .vercel
 
 contactScripts/
-src/contactScripts/
-
+src/contactScripts/contactForm.ts
+src/contactScripts
 
 src/pages/api/
 
 
-src/content/
+src/content/info.ts
+src/content
+
+src/pages/api/contact.ts
+
+
